@@ -1,0 +1,826 @@
+<!DOCTYPE html>
+<html lang="ro" dir="ltr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bogdana Nails | Manichiură & Pedichiură Premium - Razeni</title>
+    <meta name="description" content="Bogdana Nails - Servicii premium de manichiură, pedichiură și nail art în Razeni. 4+ ani de experiență. Programează-te online acum!">
+    <meta name="keywords" content="manichiura, pedichiura, nail art, Razeni, unghii, gel, bogdana nails">
+    <meta property="og:title" content="Bogdana Nails | Manichiură Premium">
+    <meta property="og:description" content="Servicii premium de nail art cu 4+ ani de experiență. Calitate, sterilitate, minimalism.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://www.instagram.com/nails_bogdana_/">
+    <link rel="canonical" href="https://www.instagram.com/nails_bogdana_/">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- ============ LOADING SCREEN ============ -->
+    <div id="loading-screen">
+        <div class="loader-content">
+            <div class="loader-icon">💅</div>
+            <div class="loader-text">Bogdana Nails</div>
+            <div class="loader-bar"><div class="loader-bar-fill"></div></div>
+        </div>
+    </div>
+
+    <!-- ============ NAVIGATION ============ -->
+    <nav class="navbar" id="navbar">
+        <div class="container nav-container">
+            <a href="#hero" class="nav-logo">
+                <span class="logo-icon">✦</span>
+                <span class="logo-text">Bogdana<span class="logo-accent">Nails</span></span>
+            </a>
+
+            <ul class="nav-links" id="nav-links">
+                <li><a href="#about" data-i18n="nav_about">Despre</a></li>
+                <li><a href="#services" data-i18n="nav_services">Servicii</a></li>
+                <li><a href="#gallery" data-i18n="nav_gallery">Galerie</a></li>
+                <li><a href="#pricing" data-i18n="nav_pricing">Prețuri</a></li>
+                <li><a href="#testimonials" data-i18n="nav_reviews">Recenzii</a></li>
+                <li><a href="#contact" data-i18n="nav_contact">Contact</a></li>
+            </ul>
+
+            <div class="nav-actions">
+                <button class="theme-toggle" id="theme-toggle" aria-label="Toggle theme">
+                    <span class="theme-icon">🌙</span>
+                </button>
+                <button class="lang-toggle" id="lang-toggle" aria-label="Toggle language">
+                    <span class="lang-text">EN</span>
+                </button>
+                <div class="loyalty-badge" id="loyalty-badge" title="Puncte de fidelitate">
+                    <span class="loyalty-icon">⭐</span>
+                    <span class="loyalty-count" id="loyalty-count">0</span>
+                </div>
+                <a href="#booking" class="nav-cta" data-i18n="nav_book">Programează-te</a>
+                <button class="hamburger" id="hamburger" aria-label="Menu">
+                    <span></span><span></span><span></span>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- ============ HERO SECTION ============ -->
+    <section id="hero" class="hero">
+        <canvas id="particles-canvas"></canvas>
+        <div class="hero-bg-overlay"></div>
+        <div class="hero-content">
+            <div class="hero-badge reveal">
+                <span class="hero-badge-dot"></span>
+                <span data-i18n="hero_badge">Disponibil pentru Programări</span>
+            </div>
+            <h1 class="hero-title reveal">
+                <span data-i18n="hero_title_1">Unghii care</span><br>
+                <span class="neon-text" data-i18n="hero_title_2">Strălucesc</span>
+            </h1>
+            <p class="hero-subtitle reveal" data-i18n="hero_subtitle">
+                4+ ani de excelență în nail art. Calitate, sterilitate și design minimalist — fiecare detaliu contează.
+            </p>
+            <div class="hero-cta-group reveal">
+                <a href="#booking" class="btn btn-primary" data-i18n="hero_cta_book">
+                    <span class="btn-icon">📅</span> Programează-te Acum
+                </a>
+                <a href="#services" class="btn btn-secondary" data-i18n="hero_cta_services">
+                    <span class="btn-icon">✨</span> Descoperă Serviciile
+                </a>
+            </div>
+            <div class="hero-stats reveal">
+                <div class="stat-item">
+                    <span class="stat-number" data-target="215" data-suffix="+">0</span>
+                    <span class="stat-label" data-i18n="stat_works">Lucrări Realizate</span>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-number" data-target="4" data-suffix="+">0</span>
+                    <span class="stat-label" data-i18n="stat_years">Ani Experiență</span>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-number" data-target="100" data-suffix="%">0</span>
+                    <span class="stat-label" data-i18n="stat_sterile">Sterilitate</span>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-number" data-target="50" data-suffix="+">0</span>
+                    <span class="stat-label" data-i18n="stat_clients">Clienți Fericiți</span>
+                </div>
+            </div>
+        </div>
+        <div class="hero-scroll-indicator">
+            <div class="scroll-mouse">
+                <div class="scroll-wheel"></div>
+            </div>
+            <span data-i18n="hero_scroll">Scroll</span>
+        </div>
+    </section>
+
+    <!-- ============ ABOUT SECTION ============ -->
+    <section id="about" class="section">
+        <div class="container">
+            <div class="section-header reveal">
+                <span class="section-tag" data-i18n="about_tag">Povestea Mea</span>
+                <h2 class="section-title" data-i18n="about_title">Pasiune pentru <span class="neon-text">Perfecțiune</span></h2>
+                <p class="section-subtitle" data-i18n="about_subtitle">Fiecare set de unghii spune o poveste unică</p>
+            </div>
+            <div class="about-grid">
+                <div class="about-image reveal">
+                    <img src="images/bogdana_profile.jpg" alt="Bogdana Zosim" loading="lazy">
+                    <div class="about-image-badge">
+                        <span class="badge-years">4+</span>
+                        <span class="badge-text" data-i18n="about_badge">Ani de Experiență</span>
+                    </div>
+                </div>
+                <div class="about-text reveal">
+                    <h3 data-i18n="about_heading">Bună, sunt Bogdana! 👋</h3>
+                    <p data-i18n="about_p1">
+                        Cu peste 4 ani de experiență în domeniul nail art, am transformat pasiunea mea într-o artă. 
+                        Fiecare client primește atenție individualizată și un design unic care reflectă personalitatea sa.
+                    </p>
+                    <p data-i18n="about_p2">
+                        Lucrez exclusiv cu produse premium și respect cele mai înalte standarde de igienă și sterilizare. 
+                        Stilul meu se bazează pe minimalism elegant, dar pot realiza orice design doriți.
+                    </p>
+                    <div class="about-badges">
+                        <div class="badge-item">
+                            <span class="badge-icon">🏆</span>
+                            <span data-i18n="badge_quality">Calitativ</span>
+                        </div>
+                        <div class="badge-item">
+                            <span class="badge-icon">🛡️</span>
+                            <span data-i18n="badge_sterile">Steril</span>
+                        </div>
+                        <div class="badge-item">
+                            <span class="badge-icon">🎨</span>
+                            <span data-i18n="badge_minimal">Minimalism</span>
+                        </div>
+                        <div class="badge-item">
+                            <span class="badge-icon">💎</span>
+                            <span data-i18n="badge_premium">Premium</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============ SERVICES SECTION ============ -->
+    <section id="services" class="section">
+        <div class="container">
+            <div class="section-header reveal">
+                <span class="section-tag" data-i18n="services_tag">Ce Ofer</span>
+                <h2 class="section-title" data-i18n="services_title">Serviciile <span class="neon-text">Mele</span></h2>
+                <p class="section-subtitle" data-i18n="services_subtitle">De la manichiură clasică la nail art complex</p>
+            </div>
+            <div class="services-grid">
+                <div class="service-card reveal" data-service="manichiura">
+                    <div class="service-glow"></div>
+                    <div class="service-icon">💅</div>
+                    <h3 class="service-name" data-i18n="service_mani_name">Manichiură</h3>
+                    <p class="service-desc" data-i18n="service_mani_desc">Manichiură profesională cu gel sau semipermanent. Forme și culori la alegere.</p>
+                    <div class="service-details">
+                        <span class="service-duration"><span class="detail-icon">⏱️</span> 90 min</span>
+                        <span class="service-price"><span class="detail-icon">💰</span> <span data-i18n="service_from">de la</span> 120 LEI</span>
+                    </div>
+                </div>
+                <div class="service-card reveal" data-service="pedichiura">
+                    <div class="service-glow"></div>
+                    <div class="service-icon">🦶</div>
+                    <h3 class="service-name" data-i18n="service_pedi_name">Pedichiură</h3>
+                    <p class="service-desc" data-i18n="service_pedi_desc">Pedichiură completă cu îngrijire specială pentru picioare. Confort și eleganță.</p>
+                    <div class="service-details">
+                        <span class="service-duration"><span class="detail-icon">⏱️</span> 120 min</span>
+                        <span class="service-price"><span class="detail-icon">💰</span> <span data-i18n="service_from">de la</span> 150 LEI</span>
+                    </div>
+                </div>
+                <div class="service-card reveal" data-service="nail-art">
+                    <div class="service-glow"></div>
+                    <div class="service-icon">🎨</div>
+                    <h3 class="service-name" data-i18n="service_art_name">Nail Art</h3>
+                    <p class="service-desc" data-i18n="service_art_desc">Design personalizat cu elemente artistice unice. Fiecare set este o operă de artă.</p>
+                    <div class="service-details">
+                        <span class="service-duration"><span class="detail-icon">⏱️</span> 120+ min</span>
+                        <span class="service-price"><span class="detail-icon">💰</span> <span data-i18n="service_from">de la</span> 180 LEI</span>
+                    </div>
+                </div>
+                <div class="service-card reveal" data-service="gel-overlay">
+                    <div class="service-glow"></div>
+                    <div class="service-icon">✨</div>
+                    <h3 class="service-name" data-i18n="service_gel_name">Gel Overlay</h3>
+                    <p class="service-desc" data-i18n="service_gel_desc">Întărire și modelare cu gel pentru unghii naturale puternice și elegante.</p>
+                    <div class="service-details">
+                        <span class="service-duration"><span class="detail-icon">⏱️</span> 90 min</span>
+                        <span class="service-price"><span class="detail-icon">💰</span> <span data-i18n="service_from">de la</span> 150 LEI</span>
+                    </div>
+                </div>
+                <div class="service-card reveal" data-service="fill-in">
+                    <div class="service-glow"></div>
+                    <div class="service-icon">🔄</div>
+                    <h3 class="service-name" data-i18n="service_fill_name">Întreținere (Fill-in)</h3>
+                    <p class="service-desc" data-i18n="service_fill_desc">Întreținerea setului existent. Reîmprospătare completă la 3-4 săptămâni.</p>
+                    <div class="service-details">
+                        <span class="service-duration"><span class="detail-icon">⏱️</span> 75 min</span>
+                        <span class="service-price"><span class="detail-icon">💰</span> <span data-i18n="service_from">de la</span> 100 LEI</span>
+                    </div>
+                </div>
+                <div class="service-card reveal" data-service="removal">
+                    <div class="service-glow"></div>
+                    <div class="service-icon">🧴</div>
+                    <h3 class="service-name" data-i18n="service_remove_name">Demontare</h3>
+                    <p class="service-desc" data-i18n="service_remove_desc">Îndepărtarea sigură a gelului sau semipermanentului fără a deteriora unghia.</p>
+                    <div class="service-details">
+                        <span class="service-duration"><span class="detail-icon">⏱️</span> 45 min</span>
+                        <span class="service-price"><span class="detail-icon">💰</span> <span data-i18n="service_from">de la</span> 50 LEI</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============ GALLERY SECTION ============ -->
+    <section id="gallery" class="section">
+        <div class="container">
+            <div class="section-header reveal">
+                <span class="section-tag" data-i18n="gallery_tag">Portofoliu</span>
+                <h2 class="section-title" data-i18n="gallery_title">Galeria <span class="neon-text">Mea</span></h2>
+                <p class="section-subtitle" data-i18n="gallery_subtitle">O selecție din cele mai recente lucrări</p>
+            </div>
+            <div class="gallery-filters reveal">
+                <button class="gallery-filter-btn active" data-filter="all" data-i18n="filter_all">Toate</button>
+                <button class="gallery-filter-btn" data-filter="french" data-i18n="filter_french">French</button>
+                <button class="gallery-filter-btn" data-filter="art" data-i18n="filter_art">Nail Art</button>
+                <button class="gallery-filter-btn" data-filter="chrome" data-i18n="filter_chrome">Chrome</button>
+                <button class="gallery-filter-btn" data-filter="ombre" data-i18n="filter_ombre">Ombré</button>
+            </div>
+            <div class="gallery-grid">
+                <div class="gallery-item reveal" data-category="french">
+                    <img src="images/gallery_french.png" alt="French Manicure Design" loading="lazy">
+                    <div class="gallery-overlay">
+                        <span class="gallery-zoom">🔍</span>
+                        <span class="gallery-category">French</span>
+                    </div>
+                </div>
+                <div class="gallery-item reveal" data-category="art">
+                    <img src="images/gallery_geometric.png" alt="Geometric Nail Art" loading="lazy">
+                    <div class="gallery-overlay">
+                        <span class="gallery-zoom">🔍</span>
+                        <span class="gallery-category">Nail Art</span>
+                    </div>
+                </div>
+                <div class="gallery-item reveal" data-category="art">
+                    <img src="images/gallery_floral.png" alt="Floral Nail Art" loading="lazy">
+                    <div class="gallery-overlay">
+                        <span class="gallery-zoom">🔍</span>
+                        <span class="gallery-category">Nail Art</span>
+                    </div>
+                </div>
+                <div class="gallery-item reveal" data-category="chrome">
+                    <img src="images/gallery_chrome.png" alt="Chrome Mirror Nails" loading="lazy">
+                    <div class="gallery-overlay">
+                        <span class="gallery-zoom">🔍</span>
+                        <span class="gallery-category">Chrome</span>
+                    </div>
+                </div>
+                <div class="gallery-item reveal" data-category="ombre">
+                    <img src="images/gallery_ombre.png" alt="Ombre Gradient Nails" loading="lazy">
+                    <div class="gallery-overlay">
+                        <span class="gallery-zoom">🔍</span>
+                        <span class="gallery-category">Ombré</span>
+                    </div>
+                </div>
+                <div class="gallery-item reveal" data-category="french">
+                    <img src="images/about_artist.png" alt="Classic Nail Design" loading="lazy">
+                    <div class="gallery-overlay">
+                        <span class="gallery-zoom">🔍</span>
+                        <span class="gallery-category">Classic</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============ LIGHTBOX MODAL ============ -->
+    <div class="lightbox-modal" id="lightbox-modal">
+        <button class="lightbox-close" id="lightbox-close">✕</button>
+        <img class="lightbox-image" id="lightbox-image" src="" alt="Gallery image enlarged">
+    </div>
+
+    <!-- ============ BEFORE / AFTER SECTION ============ -->
+    <section id="before-after" class="section">
+        <div class="container">
+            <div class="section-header reveal">
+                <span class="section-tag" data-i18n="ba_tag">Transformare</span>
+                <h2 class="section-title" data-i18n="ba_title">Înainte & <span class="neon-text">După</span></h2>
+                <p class="section-subtitle" data-i18n="ba_subtitle">Glisează pentru a vedea diferența</p>
+            </div>
+            <div class="ba-container reveal">
+                <div class="ba-slider" id="ba-slider">
+                    <div class="ba-image ba-after">
+                        <img src="images/after_nails.png" alt="After - Nails transformed">
+                    </div>
+                    <div class="ba-image ba-before" id="ba-before">
+                        <img src="images/before_nails.png" alt="Before - Natural nails">
+                    </div>
+                    <div class="ba-handle" id="ba-handle">
+                        <div class="ba-handle-line"></div>
+                        <div class="ba-handle-circle">
+                            <span>◀ ▶</span>
+                        </div>
+                        <div class="ba-handle-line"></div>
+                    </div>
+                    <span class="ba-label ba-label-before" data-i18n="ba_before">ÎNAINTE</span>
+                    <span class="ba-label ba-label-after" data-i18n="ba_after">DUPĂ</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============ BOOKING SECTION ============ -->
+    <section id="booking" class="section">
+        <div class="container">
+            <div class="section-header reveal">
+                <span class="section-tag" data-i18n="booking_tag">Rezervare</span>
+                <h2 class="section-title" data-i18n="booking_title">Programează-te <span class="neon-text">Online</span></h2>
+                <p class="section-subtitle" data-i18n="booking_subtitle">Alege serviciul, data și ora — simplu și rapid</p>
+            </div>
+            <div class="booking-container reveal">
+                <div class="booking-progress">
+                    <div class="progress-step active" data-step="1">
+                        <div class="step-circle">1</div>
+                        <span class="step-label" data-i18n="step_service">Serviciu</span>
+                    </div>
+                    <div class="progress-line"></div>
+                    <div class="progress-step" data-step="2">
+                        <div class="step-circle">2</div>
+                        <span class="step-label" data-i18n="step_datetime">Data & Ora</span>
+                    </div>
+                    <div class="progress-line"></div>
+                    <div class="progress-step" data-step="3">
+                        <div class="step-circle">3</div>
+                        <span class="step-label" data-i18n="step_info">Informații</span>
+                    </div>
+                    <div class="progress-line"></div>
+                    <div class="progress-step" data-step="4">
+                        <div class="step-circle">4</div>
+                        <span class="step-label" data-i18n="step_confirm">Confirmare</span>
+                    </div>
+                </div>
+
+                <!-- Step 1: Service Selection -->
+                <div class="booking-step active" id="booking-step-1">
+                    <h3 data-i18n="step1_title">Alege Serviciul</h3>
+                    <div class="service-options">
+                        <div class="service-option" data-service="Manichiură" data-price="120" data-duration="90">
+                            <span class="option-icon">💅</span>
+                            <div class="option-info">
+                                <span class="option-name">Manichiură</span>
+                                <span class="option-detail">90 min • 120 LEI</span>
+                            </div>
+                            <span class="option-check">✓</span>
+                        </div>
+                        <div class="service-option" data-service="Pedichiură" data-price="150" data-duration="120">
+                            <span class="option-icon">🦶</span>
+                            <div class="option-info">
+                                <span class="option-name">Pedichiură</span>
+                                <span class="option-detail">120 min • 150 LEI</span>
+                            </div>
+                            <span class="option-check">✓</span>
+                        </div>
+                        <div class="service-option" data-service="Nail Art" data-price="180" data-duration="120">
+                            <span class="option-icon">🎨</span>
+                            <div class="option-info">
+                                <span class="option-name">Nail Art</span>
+                                <span class="option-detail">120+ min • 180 LEI</span>
+                            </div>
+                            <span class="option-check">✓</span>
+                        </div>
+                        <div class="service-option" data-service="Gel Overlay" data-price="150" data-duration="90">
+                            <span class="option-icon">✨</span>
+                            <div class="option-info">
+                                <span class="option-name">Gel Overlay</span>
+                                <span class="option-detail">90 min • 150 LEI</span>
+                            </div>
+                            <span class="option-check">✓</span>
+                        </div>
+                        <div class="service-option" data-service="Întreținere (Fill-in)" data-price="100" data-duration="75">
+                            <span class="option-icon">🔄</span>
+                            <div class="option-info">
+                                <span class="option-name">Întreținere (Fill-in)</span>
+                                <span class="option-detail">75 min • 100 LEI</span>
+                            </div>
+                            <span class="option-check">✓</span>
+                        </div>
+                        <div class="service-option" data-service="Demontare" data-price="50" data-duration="45">
+                            <span class="option-icon">🧴</span>
+                            <div class="option-info">
+                                <span class="option-name">Demontare</span>
+                                <span class="option-detail">45 min • 50 LEI</span>
+                            </div>
+                            <span class="option-check">✓</span>
+                        </div>
+                    </div>
+                    <div class="booking-nav">
+                        <div></div>
+                        <button class="btn btn-primary booking-next" data-i18n="btn_next">Următorul Pas →</button>
+                    </div>
+                </div>
+
+                <!-- Step 2: Date & Time -->
+                <div class="booking-step" id="booking-step-2">
+                    <h3 data-i18n="step2_title">Alege Data & Ora</h3>
+                    <div class="calendar-container">
+                        <div class="calendar-header">
+                            <button class="calendar-nav-btn" id="cal-prev">◀</button>
+                            <span class="calendar-month" id="calendar-month"></span>
+                            <button class="calendar-nav-btn" id="cal-next">▶</button>
+                        </div>
+                        <div class="calendar-weekdays">
+                            <span>Lun</span><span>Mar</span><span>Mie</span><span>Joi</span><span>Vin</span><span>Sâm</span><span>Dum</span>
+                        </div>
+                        <div class="calendar-grid" id="calendar-grid"></div>
+                    </div>
+                    <div class="time-slots-container" id="time-slots-container" style="display:none;">
+                        <h4 data-i18n="step2_time">Alege Ora</h4>
+                        <div class="time-slots" id="time-slots"></div>
+                    </div>
+                    <div class="booking-nav">
+                        <button class="btn btn-secondary booking-back" data-i18n="btn_back">← Înapoi</button>
+                        <button class="btn btn-primary booking-next" data-i18n="btn_next">Următorul Pas →</button>
+                    </div>
+                </div>
+
+                <!-- Step 3: Contact Info -->
+                <div class="booking-step" id="booking-step-3">
+                    <h3 data-i18n="step3_title">Informațiile Tale</h3>
+                    <div class="booking-form">
+                        <div class="form-group">
+                            <label for="booking-name" data-i18n="form_name">Nume Complet</label>
+                            <input type="text" id="booking-name" placeholder="Ex: Maria Popescu" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="booking-phone" data-i18n="form_phone">Telefon</label>
+                            <input type="tel" id="booking-phone" placeholder="Ex: 0712 345 678" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="booking-email" data-i18n="form_email">Email (opțional)</label>
+                            <input type="email" id="booking-email" placeholder="Ex: maria@email.com">
+                        </div>
+                        <div class="form-group">
+                            <label for="booking-notes" data-i18n="form_notes">Notițe Speciale</label>
+                            <textarea id="booking-notes" rows="3" placeholder="Design dorit, alergii, preferințe..."></textarea>
+                        </div>
+                    </div>
+                    <div class="booking-nav">
+                        <button class="btn btn-secondary booking-back" data-i18n="btn_back">← Înapoi</button>
+                        <button class="btn btn-primary booking-next" data-i18n="btn_next">Următorul Pas →</button>
+                    </div>
+                </div>
+
+                <!-- Step 4: Confirmation -->
+                <div class="booking-step" id="booking-step-4">
+                    <h3 data-i18n="step4_title">Confirmă Programarea</h3>
+                    <div class="booking-summary" id="booking-summary">
+                        <!-- Populated by JS -->
+                    </div>
+                    <div class="booking-nav">
+                        <button class="btn btn-secondary booking-back" data-i18n="btn_back">← Înapoi</button>
+                        <button class="btn btn-primary booking-confirm" id="booking-confirm" data-i18n="btn_confirm">✓ Confirmă Programarea</button>
+                    </div>
+                </div>
+
+                <!-- Success Message -->
+                <div class="booking-success" id="booking-success" style="display:none;">
+                    <div class="success-icon">🎉</div>
+                    <h3 data-i18n="success_title">Programare Confirmată!</h3>
+                    <p data-i18n="success_text">Vei fi contactată în curând pentru confirmare. Mulțumim!</p>
+                    <button class="btn btn-primary" id="booking-reset" data-i18n="success_new">Programare Nouă</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============ TESTIMONIALS SECTION ============ -->
+    <section id="testimonials" class="section">
+        <div class="container">
+            <div class="section-header reveal">
+                <span class="section-tag" data-i18n="reviews_tag">Recenzii</span>
+                <h2 class="section-title" data-i18n="reviews_title">Ce Spun <span class="neon-text">Clientele</span></h2>
+                <p class="section-subtitle" data-i18n="reviews_subtitle">Feedback-ul clienților mele fidele</p>
+            </div>
+            <div class="testimonials-carousel reveal">
+                <div class="testimonials-track" id="testimonials-track">
+                    <div class="testimonial-card">
+                        <div class="testimonial-stars">⭐⭐⭐⭐⭐</div>
+                        <p class="testimonial-text">"Cele mai frumoase unghii pe care le-am avut vreodată! Bogdana este o adevărată artistă. Recomand cu toată încrederea!"</p>
+                        <div class="testimonial-author">
+                            <div class="author-avatar">A</div>
+                            <div class="author-info">
+                                <span class="author-name">Ana M.</span>
+                                <span class="author-role">Clientă Fidelă</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="testimonial-card">
+                        <div class="testimonial-stars">⭐⭐⭐⭐⭐</div>
+                        <p class="testimonial-text">"Profesionalism la cel mai înalt nivel. Sterilizare impecabilă și un rezultat superb de fiecare dată!"</p>
+                        <div class="testimonial-author">
+                            <div class="author-avatar">E</div>
+                            <div class="author-info">
+                                <span class="author-name">Elena R.</span>
+                                <span class="author-role">Clientă din 2023</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="testimonial-card">
+                        <div class="testimonial-stars">⭐⭐⭐⭐⭐</div>
+                        <p class="testimonial-text">"Am încercat multe saloane, dar nimeni nu se compară cu Bogdana. Atenția la detalii este incredibilă!"</p>
+                        <div class="testimonial-author">
+                            <div class="author-avatar">M</div>
+                            <div class="author-info">
+                                <span class="author-name">Maria P.</span>
+                                <span class="author-role">Clientă VIP</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="testimonial-card">
+                        <div class="testimonial-stars">⭐⭐⭐⭐⭐</div>
+                        <p class="testimonial-text">"Unghii perfecte care rezistă 3-4 săptămâni fără probleme. Plus, atmosfera e mereu relaxantă și plăcută."</p>
+                        <div class="testimonial-author">
+                            <div class="author-avatar">I</div>
+                            <div class="author-info">
+                                <span class="author-name">Ioana D.</span>
+                                <span class="author-role">Clientă din 2024</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="testimonial-card">
+                        <div class="testimonial-stars">⭐⭐⭐⭐⭐</div>
+                        <p class="testimonial-text">"Bogdana mi-a realizat un design pe care l-am văzut pe Pinterest și a ieșit chiar mai bine decât în poză!"</p>
+                        <div class="testimonial-author">
+                            <div class="author-avatar">S</div>
+                            <div class="author-info">
+                                <span class="author-name">Sofia T.</span>
+                                <span class="author-role">Clientă Nouă</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="carousel-dots" id="carousel-dots"></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============ PRICING SECTION ============ -->
+    <section id="pricing" class="section">
+        <div class="container">
+            <div class="section-header reveal">
+                <span class="section-tag" data-i18n="pricing_tag">Investiție</span>
+                <h2 class="section-title" data-i18n="pricing_title">Pachete & <span class="neon-text">Prețuri</span></h2>
+                <p class="section-subtitle" data-i18n="pricing_subtitle">Transparență totală în prețuri</p>
+            </div>
+            <div class="pricing-grid">
+                <div class="pricing-card reveal">
+                    <div class="pricing-header">
+                        <span class="pricing-icon">🌸</span>
+                        <h3 class="pricing-name" data-i18n="price_basic_name">Basic</h3>
+                        <p class="pricing-desc" data-i18n="price_basic_desc">Perfect pentru un look curat</p>
+                    </div>
+                    <div class="pricing-amount">
+                        <span class="price-value">120</span>
+                        <span class="price-currency">LEI</span>
+                    </div>
+                    <ul class="pricing-features">
+                        <li class="feature-included" data-i18n="price_f1">✓ Manichiură clasică</li>
+                        <li class="feature-included" data-i18n="price_f2">✓ Lac semipermanent</li>
+                        <li class="feature-included" data-i18n="price_f3">✓ Îngrijire cuticule</li>
+                        <li class="feature-excluded" data-i18n="price_f4">✗ Design personalizat</li>
+                        <li class="feature-excluded" data-i18n="price_f5">✗ Elemente 3D</li>
+                    </ul>
+                    <a href="#booking" class="btn btn-secondary pricing-btn" data-i18n="price_cta">Programează-te</a>
+                </div>
+                <div class="pricing-card popular reveal">
+                    <div class="popular-badge" data-i18n="price_popular">⭐ Cel Mai Popular</div>
+                    <div class="pricing-header">
+                        <span class="pricing-icon">💎</span>
+                        <h3 class="pricing-name" data-i18n="price_premium_name">Premium</h3>
+                        <p class="pricing-desc" data-i18n="price_premium_desc">Design unic și rafinat</p>
+                    </div>
+                    <div class="pricing-amount">
+                        <span class="price-value">180</span>
+                        <span class="price-currency">LEI</span>
+                    </div>
+                    <ul class="pricing-features">
+                        <li class="feature-included" data-i18n="price_pf1">✓ Manichiură premium</li>
+                        <li class="feature-included" data-i18n="price_pf2">✓ Gel / Semipermanent</li>
+                        <li class="feature-included" data-i18n="price_pf3">✓ Îngrijire completă</li>
+                        <li class="feature-included" data-i18n="price_pf4">✓ Design personalizat</li>
+                        <li class="feature-excluded" data-i18n="price_pf5">✗ Elemente 3D / Pietre</li>
+                    </ul>
+                    <a href="#booking" class="btn btn-primary pricing-btn" data-i18n="price_cta">Programează-te</a>
+                </div>
+                <div class="pricing-card reveal">
+                    <div class="pricing-header">
+                        <span class="pricing-icon">👑</span>
+                        <h3 class="pricing-name" data-i18n="price_vip_name">VIP</h3>
+                        <p class="pricing-desc" data-i18n="price_vip_desc">Experiența supremă</p>
+                    </div>
+                    <div class="pricing-amount">
+                        <span class="price-value">250</span>
+                        <span class="price-currency">LEI</span>
+                    </div>
+                    <ul class="pricing-features">
+                        <li class="feature-included" data-i18n="price_vf1">✓ Totul din Premium</li>
+                        <li class="feature-included" data-i18n="price_vf2">✓ Elemente 3D & Pietre</li>
+                        <li class="feature-included" data-i18n="price_vf3">✓ Chrome / Holografic</li>
+                        <li class="feature-included" data-i18n="price_vf4">✓ Design complex</li>
+                        <li class="feature-included" data-i18n="price_vf5">✓ Tratament hidratant</li>
+                    </ul>
+                    <a href="#booking" class="btn btn-secondary pricing-btn" data-i18n="price_cta">Programează-te</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============ INSTAGRAM SECTION ============ -->
+    <section id="instagram" class="section">
+        <div class="container">
+            <div class="section-header reveal">
+                <span class="section-tag" data-i18n="insta_tag">Social</span>
+                <h2 class="section-title" data-i18n="insta_title">Urmărește-mă pe <span class="neon-text">Instagram</span></h2>
+                <p class="section-subtitle" data-i18n="insta_subtitle">@nails_bogdana_ • 215+ Postări • Inspirație zilnică</p>
+            </div>
+            <div class="insta-grid reveal">
+                <div class="insta-card">
+                    <img src="images/gallery_french.png" alt="Instagram post" loading="lazy">
+                    <div class="insta-overlay">
+                        <span>❤️ 42</span>
+                        <span>💬 5</span>
+                    </div>
+                </div>
+                <div class="insta-card">
+                    <img src="images/gallery_geometric.png" alt="Instagram post" loading="lazy">
+                    <div class="insta-overlay">
+                        <span>❤️ 67</span>
+                        <span>💬 8</span>
+                    </div>
+                </div>
+                <div class="insta-card">
+                    <img src="images/gallery_floral.png" alt="Instagram post" loading="lazy">
+                    <div class="insta-overlay">
+                        <span>❤️ 53</span>
+                        <span>💬 12</span>
+                    </div>
+                </div>
+                <div class="insta-card">
+                    <img src="images/gallery_chrome.png" alt="Instagram post" loading="lazy">
+                    <div class="insta-overlay">
+                        <span>❤️ 89</span>
+                        <span>💬 15</span>
+                    </div>
+                </div>
+                <div class="insta-card">
+                    <img src="images/gallery_ombre.png" alt="Instagram post" loading="lazy">
+                    <div class="insta-overlay">
+                        <span>❤️ 38</span>
+                        <span>💬 4</span>
+                    </div>
+                </div>
+                <div class="insta-card">
+                    <img src="images/about_artist.png" alt="Instagram post" loading="lazy">
+                    <div class="insta-overlay">
+                        <span>❤️ 71</span>
+                        <span>💬 9</span>
+                    </div>
+                </div>
+            </div>
+            <div class="insta-cta reveal">
+                <a href="https://www.instagram.com/nails_bogdana_/" target="_blank" rel="noopener noreferrer" class="btn btn-primary insta-follow-btn">
+                    <span class="btn-icon">📸</span> Urmărește @nails_bogdana_
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============ CONTACT SECTION ============ -->
+    <section id="contact" class="section">
+        <div class="container">
+            <div class="section-header reveal">
+                <span class="section-tag" data-i18n="contact_tag">Contact</span>
+                <h2 class="section-title" data-i18n="contact_title">Hai să <span class="neon-text">Vorbim</span></h2>
+                <p class="section-subtitle" data-i18n="contact_subtitle">Sunt aici pentru orice întrebare</p>
+            </div>
+            <div class="contact-grid">
+                <div class="contact-form-wrapper reveal">
+                    <form class="contact-form" id="contact-form">
+                        <div class="form-group">
+                            <label for="contact-name" data-i18n="contact_name">Nume</label>
+                            <input type="text" id="contact-name" placeholder="Numele tău" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="contact-phone" data-i18n="contact_phone">Telefon</label>
+                            <input type="tel" id="contact-phone" placeholder="Număr de telefon" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="contact-message" data-i18n="contact_message">Mesaj</label>
+                            <textarea id="contact-message" rows="4" placeholder="Scrie-mi un mesaj..." required></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary contact-submit" data-i18n="contact_send">Trimite Mesajul ✉️</button>
+                    </form>
+                </div>
+                <div class="contact-info reveal">
+                    <div class="info-card">
+                        <span class="info-icon">📍</span>
+                        <div>
+                            <h4 data-i18n="contact_location">Locație</h4>
+                            <p>Razeni, Moldova</p>
+                        </div>
+                    </div>
+                    <div class="info-card">
+                        <span class="info-icon">🕐</span>
+                        <div>
+                            <h4 data-i18n="contact_hours">Program</h4>
+                            <p>Lun - Vin: 09:00 - 18:00<br>Sâm: 10:00 - 16:00<br>Dum: Închis</p>
+                        </div>
+                    </div>
+                    <div class="info-card">
+                        <span class="info-icon">📱</span>
+                        <div>
+                            <h4 data-i18n="contact_social">Social Media</h4>
+                            <div class="social-links">
+                                <a href="https://www.instagram.com/nails_bogdana_/" target="_blank" rel="noopener noreferrer" class="social-link" aria-label="Instagram">
+                                    📸 Instagram
+                                </a>
+                                <a href="https://www.instagram.com/bogdana.zosim/" target="_blank" rel="noopener noreferrer" class="social-link" aria-label="Personal Instagram">
+                                    👤 Personal
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============ FOOTER ============ -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <span class="footer-logo">✦ Bogdana<span class="logo-accent">Nails</span></span>
+                    <p class="footer-tagline" data-i18n="footer_tagline">Calitate. Sterilitate. Minimalism.</p>
+                    <div class="footer-social">
+                        <a href="https://www.instagram.com/nails_bogdana_/" target="_blank" rel="noopener noreferrer" aria-label="Instagram">📸</a>
+                        <a href="https://www.instagram.com/bogdana.zosim/" target="_blank" rel="noopener noreferrer" aria-label="Personal">👤</a>
+                    </div>
+                </div>
+                <div class="footer-links">
+                    <h4 data-i18n="footer_links">Navigare</h4>
+                    <a href="#about" data-i18n="nav_about">Despre</a>
+                    <a href="#services" data-i18n="nav_services">Servicii</a>
+                    <a href="#gallery" data-i18n="nav_gallery">Galerie</a>
+                    <a href="#pricing" data-i18n="nav_pricing">Prețuri</a>
+                    <a href="#booking" data-i18n="nav_book">Programare</a>
+                    <a href="#contact" data-i18n="nav_contact">Contact</a>
+                </div>
+                <div class="footer-services">
+                    <h4 data-i18n="footer_services">Servicii</h4>
+                    <span>Manichiură</span>
+                    <span>Pedichiură</span>
+                    <span>Nail Art</span>
+                    <span>Gel Overlay</span>
+                    <span>Fill-in</span>
+                    <span>Demontare</span>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>© 2024 Bogdana Nails. <span data-i18n="footer_rights">Toate drepturile rezervate.</span></p>
+                <p class="footer-made">Made with 💅 & ❤️</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- ============ FLOATING ELEMENTS ============ -->
+    <a href="https://wa.me/+40700000000?text=Bună! Aș dori să fac o programare." 
+       class="whatsapp-float" id="whatsapp-float" target="_blank" rel="noopener noreferrer" 
+       aria-label="Contact on WhatsApp">
+        💬
+    </a>
+
+    <button class="scroll-top" id="scroll-top" aria-label="Scroll to top">↑</button>
+
+    <!-- ============ COOKIE BANNER ============ -->
+    <div class="cookie-banner" id="cookie-banner">
+        <div class="cookie-content">
+            <p data-i18n="cookie_text">🍪 Acest site folosește cookie-uri pentru o experiență mai bună.</p>
+            <div class="cookie-actions">
+                <button class="btn btn-primary cookie-accept" id="cookie-accept" data-i18n="cookie_accept">Accept</button>
+                <button class="btn btn-secondary cookie-decline" id="cookie-decline" data-i18n="cookie_decline">Refuz</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- ============ TOAST CONTAINER ============ -->
+    <div class="toast-container" id="toast-container"></div>
+
+    <script src="script.js"></script>
+</body>
+</html>
