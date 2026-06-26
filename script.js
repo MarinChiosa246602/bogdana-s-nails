@@ -603,26 +603,29 @@ document.addEventListener('DOMContentLoaded', () => {
                 icsBtn.download = 'programare-bogdana-nails.ics';
             }
 
-            // 2. Send email via EmailJS (if configured)
-            // Note: Update "YOUR_SERVICE_ID", "YOUR_TEMPLATE_ID" with actual EmailJS IDs
-            if (typeof emailjs !== 'undefined') {
-                const templateParams = {
-                    client_name: bookingState.contact.name,
-                    client_phone: bookingState.contact.phone,
-                    client_email: bookingState.contact.email || 'N/A',
-                    service: bookingState.service,
-                    date: bookingState.date,
-                    time: bookingState.time,
-                    notes: bookingState.contact.notes || '-'
-                };
-                
-                emailjs.send("YOUR_SERVICE_ID", "YOUR_TEMPLATE_ID", templateParams)
-                    .then(() => {
-                        console.log("Email trimis cu succes!");
-                    }, (err) => {
-                        console.error("Eroare la trimiterea emailului:", err);
-                    });
-            }
+            // 2. Send data to Google Apps Script Webhook
+            const webhookUrl = "https://script.google.com/macros/s/AKfycbzasZ4XVHu6iXMdzGdDj6hIDc_IhWgr3T8jkmnwdqHIjnSMeN7AOQzxpI-GHcmi761U/exec";
+            
+            const payload = {
+                clientName: bookingState.contact.name,
+                clientPhone: bookingState.contact.phone,
+                clientEmail: bookingState.contact.email,
+                service: bookingState.service,
+                dateStr: bookingState.date,
+                timeStr: bookingState.time,
+                durationMins: duration,
+                price: bookingState.price,
+                notes: bookingState.contact.notes
+            };
+
+            fetch(webhookUrl, {
+                method: 'POST',
+                body: JSON.stringify(payload)
+            }).then(response => {
+                console.log("Date trimise către Google Apps Script cu succes!");
+            }).catch(error => {
+                console.error("Eroare la trimiterea datelor:", error);
+            });
 
             // 3. Show success screen
             steps.forEach(s => s.style.display = 'none');
