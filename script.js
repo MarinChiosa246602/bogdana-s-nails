@@ -190,8 +190,6 @@ document.addEventListener('DOMContentLoaded', () => {
                     item.classList.add('hide');
                 }
             });
-            
-            addPoints(5, 'Ai explorat galeria!');
         });
     });
 
@@ -582,8 +580,6 @@ document.addEventListener('DOMContentLoaded', () => {
             const bookings = JSON.parse(localStorage.getItem('bogdana_bookings') || '[]');
             bookings.push({ ...bookingState, id: Date.now() });
             localStorage.setItem('bogdana_bookings', JSON.stringify(bookings));
-            
-            addPoints(100, 'Ai primit puncte pentru programare!');
 
             // 1. Prepare calendar links
             const startDate = parseBookingDate(bookingState.date, bookingState.time);
@@ -704,22 +700,6 @@ document.addEventListener('DOMContentLoaded', () => {
         // Initial application is skipped here for brevity unless keys fully match, default is RO HTML
     }
 
-    // 11. LOYALTY POINTS
-    const loyaltyEl = document.getElementById('loyalty-count');
-    let points = parseInt(localStorage.getItem('bogdana_points') || '0');
-    
-    function updatePointsDisplay() {
-        if (loyaltyEl) loyaltyEl.textContent = points;
-    }
-    
-    function addPoints(amount, message) {
-        points += amount;
-        localStorage.setItem('bogdana_points', points);
-        updatePointsDisplay();
-        createToast(`+${amount} pct. ${message}`, 'warning');
-    }
-    updatePointsDisplay();
-
     // 12. COOKIE BANNER
     const cookieBanner = document.getElementById('cookie-banner');
     const cookieAccept = document.getElementById('cookie-accept');
@@ -733,7 +713,6 @@ document.addEventListener('DOMContentLoaded', () => {
         cookieAccept.addEventListener('click', () => {
             localStorage.setItem('bogdana_cookies', 'accepted');
             cookieBanner.classList.remove('show');
-            addPoints(10, 'Mulțumim!');
         });
 
         cookieDecline.addEventListener('click', () => {

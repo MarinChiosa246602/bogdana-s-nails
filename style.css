@@ -343,18 +343,6 @@ body.light-mode .navbar.scrolled {
   transform: translateY(-2px);
 }
 
-.loyalty-badge {
-  display: flex;
-  align-items: center;
-  gap: 5px;
-  padding: 8px 12px;
-  background: var(--bg-glass);
-  border: 1px solid var(--neon-gold);
-  border-radius: 20px;
-  font-weight: 600;
-  font-size: 0.9rem;
-  color: var(--neon-gold);
-}
 
 .nav-cta {
   padding: 10px 24px;
