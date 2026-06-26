@@ -1302,6 +1302,45 @@ body.light-mode .hero-bg-overlay {
   margin-bottom: 20px;
 }
 
+.calendar-actions {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  margin-top: 25px;
+  align-items: center;
+}
+
+.calendar-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  max-width: 300px;
+  font-weight: 500;
+  padding: 12px 25px;
+  text-decoration: none;
+}
+
+.btn-outline {
+  background: transparent;
+  color: var(--text);
+  border: 1px solid var(--border);
+  padding: 12px 30px;
+  border-radius: 30px;
+  font-family: 'Outfit', sans-serif;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+.btn-outline:hover {
+  border-color: var(--neon-pink);
+  color: var(--neon-pink);
+  box-shadow: 0 0 10px rgba(255, 0, 128, 0.3);
+}
+
 /* ============ TESTIMONIALS ============ */
 .testimonials-carousel {
   position: relative;

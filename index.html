@@ -15,6 +15,12 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+    <script type="text/javascript">
+        (function() {
+            emailjs.init("YOUR_PUBLIC_KEY"); // Replace with your actual Public Key from EmailJS
+        })();
+    </script>
 </head>
 <body>
 
@@ -491,8 +497,18 @@
                 <div class="booking-success" id="booking-success" style="display:none;">
                     <div class="success-icon">🎉</div>
                     <h3 data-i18n="success_title">Programare Confirmată!</h3>
-                    <p data-i18n="success_text">Vei fi contactată în curând pentru confirmare. Mulțumim!</p>
-                    <button class="btn btn-primary" id="booking-reset" data-i18n="success_new">Programare Nouă</button>
+                    <p data-i18n="success_text">Verifică-ți emailul pentru confirmare. Adaugă programarea în calendarul tău:</p>
+                    
+                    <div class="calendar-actions">
+                        <a href="#" id="gcal-btn" target="_blank" class="btn btn-primary calendar-btn">
+                            📅 Google Calendar
+                        </a>
+                        <a href="#" id="ics-btn" class="btn btn-secondary calendar-btn">
+                            ⬇️ Descarcă .ics
+                        </a>
+                    </div>
+
+                    <button class="btn btn-outline" id="booking-reset" data-i18n="success_new" style="margin-top: 1.5rem;">Programare Nouă</button>
                 </div>
             </div>
         </div>

@@ -529,6 +529,53 @@ document.addEventListener('DOMContentLoaded', () => {
         `;
     }
 
+    // Calendar Helpers
+    function parseBookingDate(dateStr, timeStr) {
+        const monthNames = ['Ianuarie', 'Februarie', 'Martie', 'Aprilie', 'Mai', 'Iunie', 'Iulie', 'August', 'Septembrie', 'Octombrie', 'Noiembrie', 'Decembrie'];
+        const parts = dateStr.split(' ');
+        const day = parseInt(parts[0]);
+        const monthIndex = monthNames.indexOf(parts[1]);
+        const year = parseInt(parts[2]);
+        
+        const timeParts = timeStr.split(':');
+        const hours = parseInt(timeParts[0]);
+        const minutes = parseInt(timeParts[1]);
+
+        return new Date(year, monthIndex, day, hours, minutes, 0);
+    }
+
+    function generateGoogleCalendarLink(startDate, durationMins, title, details) {
+        const endDate = new Date(startDate.getTime() + durationMins * 60000);
+        const formatTime = (date) => date.toISOString().replace(/-|:|\.\d+/g, '');
+        const params = new URLSearchParams({
+            text: title,
+            dates: `${formatTime(startDate)}/${formatTime(endDate)}`,
+            details: details
+        });
+        return `https://calendar.google.com/calendar/render?action=TEMPLATE&${params.toString()}`;
+    }
+
+    function generateICSFile(startDate, durationMins, title, details) {
+        const endDate = new Date(startDate.getTime() + durationMins * 60000);
+        const formatTime = (date) => date.toISOString().replace(/-|:|\.\d+/g, '');
+        
+        const icsContent = [
+            'BEGIN:VCALENDAR',
+            'VERSION:2.0',
+            'PRODID:-//Bogdana Nails//Booking//RO',
+            'BEGIN:VEVENT',
+            `DTSTART:${formatTime(startDate)}`,
+            `DTEND:${formatTime(endDate)}`,
+            `SUMMARY:${title}`,
+            `DESCRIPTION:${details.replace(/\n/g, '\\n')}`,
+            'END:VEVENT',
+            'END:VCALENDAR'
+        ].join('\r\n');
+
+        const blob = new Blob([icsContent], { type: 'text/calendar;charset=utf-8' });
+        return URL.createObjectURL(blob);
+    }
+
     if (confirmBtn) {
         confirmBtn.addEventListener('click', () => {
             // Save to localStorage
@@ -538,7 +585,46 @@ document.addEventListener('DOMContentLoaded', () => {
             
             addPoints(100, 'Ai primit puncte pentru programare!');
 
-            // Show success
+            // 1. Prepare calendar links
+            const startDate = parseBookingDate(bookingState.date, bookingState.time);
+            const duration = parseInt(bookingState.duration) || 60;
+            const title = `Programare ${bookingState.service} - Bogdana Nails`;
+            const details = `Programare pentru: ${bookingState.contact.name}\nTelefon: ${bookingState.contact.phone}\nServiciu: ${bookingState.service}\nPreț estimativ: ${bookingState.price} LEI`;
+            
+            const gcalLink = generateGoogleCalendarLink(startDate, duration, title, details);
+            const icsLink = generateICSFile(startDate, duration, title, details);
+
+            const gcalBtn = document.getElementById('gcal-btn');
+            const icsBtn = document.getElementById('ics-btn');
+            
+            if (gcalBtn) gcalBtn.href = gcalLink;
+            if (icsBtn) {
+                icsBtn.href = icsLink;
+                icsBtn.download = 'programare-bogdana-nails.ics';
+            }
+
+            // 2. Send email via EmailJS (if configured)
+            // Note: Update "YOUR_SERVICE_ID", "YOUR_TEMPLATE_ID" with actual EmailJS IDs
+            if (typeof emailjs !== 'undefined') {
+                const templateParams = {
+                    client_name: bookingState.contact.name,
+                    client_phone: bookingState.contact.phone,
+                    client_email: bookingState.contact.email || 'N/A',
+                    service: bookingState.service,
+                    date: bookingState.date,
+                    time: bookingState.time,
+                    notes: bookingState.contact.notes || '-'
+                };
+                
+                emailjs.send("YOUR_SERVICE_ID", "YOUR_TEMPLATE_ID", templateParams)
+                    .then(() => {
+                        console.log("Email trimis cu succes!");
+                    }, (err) => {
+                        console.error("Eroare la trimiterea emailului:", err);
+                    });
+            }
+
+            // 3. Show success screen
             steps.forEach(s => s.style.display = 'none');
             document.querySelector('.booking-progress').style.display = 'none';
             document.getElementById('booking-success').style.display = 'block';
