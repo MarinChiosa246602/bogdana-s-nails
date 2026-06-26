@@ -600,7 +600,7 @@ document.addEventListener('DOMContentLoaded', () => {
             }
 
             // 2. Send data to Google Apps Script Webhook
-            const webhookUrl = "https://script.google.com/macros/s/AKfycbzasZ4XVHu6iXMdzGdDj6hIDc_IhWgr3T8jkmnwdqHIjnSMeN7AOQzxpI-GHcmi761U/exec";
+            const webhookUrl = "https://script.google.com/macros/s/AKfycbwV4kZ7K3zvgTbusnDE3K8HMesIRxLwC4-OwoPj0JIfUE3GEohkAXXzMQc0N5vA4hfXiQ/exec";
             
             const payload = {
                 clientName: bookingState.contact.name,
